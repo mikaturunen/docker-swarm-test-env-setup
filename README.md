@@ -2,7 +2,7 @@
 
 ## Requirements
 
-* Install Vagrant
+* [Install Vagrant](https://www.vagrantup.com/docs/installation/)
 
 ## Running the environment
 
