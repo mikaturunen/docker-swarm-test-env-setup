@@ -76,7 +76,7 @@ $ docker node ls
 # 9lq0quun52e3x4bpcve0kwjfe *  manager        Ready   Active        Leader
 ```
 
-That's it, you now have a docker swarm with one manager node and two clients connected to it. You drive the environment through the manager and the nodes follow the orchestration. The world if your oyster.
+That's it, you now have a docker swarm with one manager node and two clients connected to it. You drive the environment through the manager and the nodes follow the orchestration. The world is your oyster.
 
 ## What next?
 
