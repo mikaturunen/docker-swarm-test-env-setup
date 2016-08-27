@@ -62,3 +62,5 @@ $ docker node ls
 # 6ogb4iz9zhsr9iea9p3m5top5    swarm-client1  Ready   Active
 # 9lq0quun52e3x4bpcve0kwjfe *  manager        Ready   Active        Leader
 ```
+
+That's it, you now have a docker swarm with one manager node and two clients connected to it. You drive the environment through the manager and the nodes follow the orchestration. The world if your ouster.
