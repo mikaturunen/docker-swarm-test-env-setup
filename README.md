@@ -27,8 +27,8 @@ $ sudo -i
 # Nodes need to be able to connect to this IP -- This IP for this environment is set in Vagrantfile
 $ docker swarm init --advertise-addr 10.0.15.30
 
-#Swarm initialized: current node (9lq0quun52e3x4bpcve0kwjfe) is now a manager.
-#To add a worker to this swarm, run the following command:
+# Swarm initialized: current node (9lq0quun52e3x4bpcve0kwjfe) is now a manager.
+# To add a worker to this swarm, run the following command:
 
 #    docker swarm join \
 #    --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek0bh78aq-1eei6k8nhmdouyki0qz1gw0bs \
@@ -76,7 +76,7 @@ $ docker node ls
 # 9lq0quun52e3x4bpcve0kwjfe *  manager        Ready   Active        Leader
 ```
 
-That's it, you now have a docker swarm with one manager node and two clients connected to it. You drive the environment through the manager and the nodes follow the orchestration. The world if your ouster.
+That's it, you now have a docker swarm with one manager node and two clients connected to it. You drive the environment through the manager and the nodes follow the orchestration. The world if your oyster.
 
 ## What next?
 
