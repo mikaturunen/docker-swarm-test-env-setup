@@ -6,6 +6,7 @@
 
 ## Running the environment
 
+### Terminal 1
 ```bash
 vagrant up
 
@@ -37,21 +38,25 @@ $ docker node ls
 
 ```
 
+### Terminal 2
+
 ```bash
 # client1:
-# Second terminal -- this is the client1 node in the swarm
 $ vagrant ssh client1
 $ sudo -i
 $ docker swarm join --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek0bh78aq-1eei6k8nhmdouyki0qz1gw0bs 10.0.15.30:2377
 ```
 
+### Terminal 3
+
 ```bash
 # client2:
-# Third terminal -- this is the client2 node in the swarm
 $ vagrant ssh client2
 $ sudo -i
 $ docker swarm join --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek0bh78aq-1eei6k8nhmdouyki0qz1gw0bs 10.0.15.30:2377
 ```
+
+### Terminal 1
 
 ```bash
 # Terminal: Server/Manager
