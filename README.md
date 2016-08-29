@@ -52,6 +52,7 @@ $ docker node ls
 # client1:
 $ vagrant ssh client1
 $ sudo -i
+# NOTE copy the --toke from your own Terminal 1 as it'll be a bit different from this example
 $ docker swarm join --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek0bh78aq-1eei6k8nhmdouyki0qz1gw0bs 10.0.15.30:2377
 ```
 
@@ -61,6 +62,7 @@ $ docker swarm join --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek
 # client2:
 $ vagrant ssh client2
 $ sudo -i
+# NOTE copy the --toke from your own Terminal 1 as it'll be a bit different from this example
 $ docker swarm join --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek0bh78aq-1eei6k8nhmdouyki0qz1gw0bs 10.0.15.30:2377
 ```
 
