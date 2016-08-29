@@ -34,7 +34,7 @@ $ docker swarm init --advertise-addr 10.0.15.30
 #    --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek0bh78aq-1eei6k8nhmdouyki0qz1gw0bs \
 #    10.0.15.30:2377
 
-#To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+# To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 
 # View information about nodes connected
 $ docker node ls
