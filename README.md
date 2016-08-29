@@ -16,7 +16,7 @@ Open three terminal windows as it will make controlling the environment a breeze
 
 #### Terminal 1
 ```bash
-vagrant up
+$ vagrant up
 
 # Server/Manager:
 # First terminal -- this is the server node that manages the test swarm environment
