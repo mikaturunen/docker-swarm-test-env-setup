@@ -128,7 +128,7 @@ $ docker service inspect --pretty helloworld
 #  Args:			ping docker.com
 # Resources:
 
-# NOTE after running the command below, there is a chancee that your service is running on some other node than the master, you'll need to ssh to that node if you want to tinker with the specific container
+# NOTE after running the command below, there is a chance that your service is running on some other node than the master, you'll need to ssh to that node if you want to tinker with the specific container
 
 $ docker service ps helloworld
 # ID                         NAME          IMAGE   NODE     DESIRED STATE  CURRENT STATE           ERROR
