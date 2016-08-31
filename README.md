@@ -52,7 +52,7 @@ $ docker node ls
 # client1:
 $ vagrant ssh client1
 $ sudo -i
-# NOTE copy the --toke from your own Terminal 1 as it'll be a bit different from this example
+# NOTE copy the --token from your own Terminal 1 as it'll be a bit different from this example
 $ docker swarm join --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek0bh78aq-1eei6k8nhmdouyki0qz1gw0bs 10.0.15.30:2377
 ```
 
@@ -62,7 +62,7 @@ $ docker swarm join --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek
 # client2:
 $ vagrant ssh client2
 $ sudo -i
-# NOTE copy the --toke from your own Terminal 1 as it'll be a bit different from this example
+# NOTE copy the --token from your own Terminal 1 as it'll be a bit different from this example
 $ docker swarm join --token SWMTKN-1-2cria3pj176nydbj6cdapf2bi7ity8ogvhs20ynkaek0bh78aq-1eei6k8nhmdouyki0qz1gw0bs 10.0.15.30:2377
 ```
 
@@ -90,7 +90,7 @@ Alright, if you feel like adventuring with me, keep following and we'll look int
 
 ## Services
 
-This is the heard and soul of Docker swarm, services are made out of N containers spread over N nodes based on requirements and configuration.
+This is the heart and soul of Docker swarm, services are made out of N containers spread over N nodes based on requirements and configuration.
 
 ### Deploy service to the swarm
 
@@ -128,7 +128,7 @@ $ docker service inspect --pretty helloworld
 #  Args:			ping docker.com
 # Resources:
 
-# NOTE after running the below command, there is a change that your service is runnin on some other node than the master, you'll need to ssh to that node if you want to tinker the specific container
+# NOTE after running the command below, there is a chancee that your service is running on some other node than the master, you'll need to ssh to that node if you want to tinker with the specific container
 
 $ docker service ps helloworld
 # ID                         NAME          IMAGE   NODE     DESIRED STATE  CURRENT STATE           ERROR
@@ -247,7 +247,7 @@ c64vb6hscrz9f9fg2toq0tl0g   \_ redis.2  redis:3.0.6  swarm-client2  Shutdown    
 0vdzc1qp9t4zlp4gxsq67y09f  redis.3      redis:3.0.7  swarm-client2  Running        Running 25 seconds ago
 sefe2343243f983f9fu39f38f   \_ redis.2  redis:3.0.6  swarm-client2  Shutdown       Shutdown 4 minutes ago
 
-# Before swarm updates all of the tasks, you can see that some are running the older version and some the never one. Example above shows that all have updated.
+# Before swarm updates all of the tasks, you can see that some are running the older version and some the newer one. Example above shows that all have updated.
 ```
 
 ### Drain a node
@@ -264,7 +264,7 @@ $ docker node ls
 # 9lq0quun52e3x4bpcve0kwjfe *  manager        Ready   Active        Leader
 
 # Let's do a bit of cleaning for the sake of this README.md.
-# We just remove the redis service and recreate so we can play around with it even further
+# We just remove the redis service and recreate it so we can play around with it even further
 $ docker service rm redis
 $ docker service create --replicas 3 --name redis --update-delay 10s redis:3.0.6
 
@@ -299,7 +299,7 @@ $ docker node inspect --pretty swarm-client2
 # Engine Version:		1.12.1
 
 # Node shows availability as Drain. We know it's working the way it should after the drain command.
-# Run service ps to see how swarm manager redistributed the containers for the service to keep it runnin as smooth as possible.
+# Run service ps to see how swarm manager redistributed the containers for the service to keep it running as smooth as possible.
 $ docker service ps redis
 # ID                         NAME          IMAGE        NODE      DESIRED STATE  CURRENT STATE           ERROR
 # 7q92v0nr1hcgts2amcjyqg3pq  redis.1       redis:3.0.6  manager1  Running        Running 4 minutes
@@ -309,7 +309,7 @@ $ docker service ps redis
 
 # After you have run all the updates, planned maintenance tasks and such for the swarm-client2, we bring it back online with:
 $ docker node update --availability active swarm-client2
-# Running the inspect and service ps again you can see the node is in active availability state and the swarm manager starts using it again. Easy, no downtime updates are a go!
+# Running the inspect and service ps again you can see the node is in active availability state and the swarm manager starts using it again. Easy, no downtime, updates are a go!
 
 ```
 
